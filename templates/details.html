@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>National Traders</title>
+  <script type="text/javascript">
+    function autoFilAddress() {
+      let checkBox = document.getElementById('checkBox');
+      let billto = document.getElementById('billaddr');
+      let shipto = document.getElementById('shipaddr');
+      if (checkBox.checked == true) {
+        let billtovalue = billto.value;
+        console.log(billtovalue);
+        shipto.value = billtovalue;
+      }
+      else {
+        shipto.value = "";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <form method="POST" action="http://127.0.0.1:5000/register">
+    Invoice Number : <input type="text" name="inumber" required><br>
+    Date : <input type="text" name="date" required><br>
+    To Party Name : <input type="text" name="pname" required><br>
+    Bill to : <textarea name="baddr" id="billaddr" rows="4" cols="50"></textarea><br>
+    same as Bill to : <input type="checkbox" id="checkBox" onclick="autoFilAddress()"><br>
+    Ship to : <textarea name="saddr" id="shipaddr" rows="4" cols="50"></textarea><br>
+    GST Number : <input type="text" name="gnumber" required><br>
+    <table name="desc">
+      <tr>
+        <th>SI No</th>
+        <th>HSN No</th>
+        <th>Description of Goods</th>
+        <th>Quantity</th>
+        <th>Rate</th>
+      </tr>
+      <tr>
+        <th>1</th>
+        <th>
+          <select name="hsn no" id="hsn no">
+            <option value="PPC 25231930">PPC 25231930</option>
+            <option value="OPC 25231910">OPC 25231910</option>
+          </select>
+        </th>
+        <th><input type="text" name="desc" value="CEMENT"></th>
+        <th><input type="text" name="qty"></th>
+        <th><input type="text" name="rate"></th>
+      </tr>
+    </table>
+    <input type="submit" value="submit">
+  </form>
+</body>
+
+</html>
