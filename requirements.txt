@@ -1,4 +1,4 @@
-Flask==1.1.2
+Flask
 num2words==0.5.10
 gunicorn
-itsdangerous==2.0.1
+itsdangerous
