@@ -1,4 +1,4 @@
 Flask
-num2words==0.5.10
+num2words
 gunicorn
 itsdangerous
