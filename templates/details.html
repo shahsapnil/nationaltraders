@@ -24,7 +24,12 @@
 </head>
 
 <body>
-  <form method="POST" action="http://127.0.0.1:5000/register">
+  <!-- <form method="POST" action="https://nationaltraders.herokuapp.com/register"> -->
+  <form method="POST" action="http://localhost:5000/register">
+    <select name="cname" id="cname">
+      <option value="national">NATIONAL TRADERS</option>
+      <option value="rushabh">RUSHABH ENTERPRISE</option>
+    </select> <br>
     Invoice Number : <input type="text" name="inumber" required><br>
     Date : <input type="text" name="date" required><br>
     To Party Name : <input type="text" name="pname" required><br>
