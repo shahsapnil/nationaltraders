@@ -64,6 +64,6 @@ def register():
         textfinal=num2words(roffvalue).upper()+' ONLY'
         return render_template('invoice.html',finallist=finallist,list2=list2,roffvalue=roffvalue,roff=roff,textfinal=textfinal,invoice=invoice,total=total1,rate=rate,cgst=cgst1,sgst=sgst1,key=list2[0])
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run()
 
     
