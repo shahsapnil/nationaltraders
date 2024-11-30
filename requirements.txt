@@ -2,3 +2,5 @@ Flask
 num2words
 gunicorn
 itsdangerous
+streamlit
+plotly
